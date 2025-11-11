@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,        // slow animation
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,17 +30,21 @@ const Contact = () => {
     <section
       id="contact"
       className="py-5"
-      style={{ minHeight: "100vh", backgroundColor: "#f8f9fa" }}
+      style={{ minHeight: "100vh", backgroundColor: "#F8E6B3" }}
     >
       <div className="container">
-        <div className="text-center mb-5">
+        <div className="text-center mb-5" data-aos="fade-down">
           <h2 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>Contact Us</h2>
           <p className="text-muted">Get in touch for reservations and inquiries</p>
         </div>
 
         <div className="row g-4 justify-content-center">
           {/* Hotel Info */}
-          <div className="col-12 col-lg-5">
+          <div
+            className="col-12 col-lg-5"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div className="mb-4">
               <h4 style={{ fontWeight: "600", marginBottom: "1rem" }}>Hotel Information</h4>
               <p className="mb-2"><strong>Address:</strong> 49/A/1 Vettavalam Road, Kilnathur, Tiruvannamalai, 606 601</p>
@@ -52,7 +66,11 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="col-12 col-lg-5">
+          <div
+            className="col-12 col-lg-5"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className="card shadow-sm p-4">
               <h4 style={{ fontWeight: "600", marginBottom: "1rem" }}>Send us a Message</h4>
               <form onSubmit={handleSubmit}>
