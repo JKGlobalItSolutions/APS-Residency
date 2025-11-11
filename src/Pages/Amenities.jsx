@@ -2,8 +2,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import { FaWifi, FaParking, FaSnowflake, FaStopwatch } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Amenities = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   const facilities = [
     { name: "Wifi", icon: FaWifi, desc: "Dedicated Wi-Fi in each room." },
     { name: "Parking Space", icon: FaParking, desc: "Ample on-site parking." },
@@ -14,15 +22,18 @@ const Amenities = () => {
   return (
     <section id="amenities" className="py-5 bg-white text-center">
       <div className="container">
-        <h2 className="display-5 mb-4">Amenities At Hotel</h2>
-        <p className="text-muted mb-5">
+        <h2 className="display-5 mb-4" data-aos="fade-down">
+          Amenities At Hotel
+        </h2>
+        <p className="text-muted mb-5" data-aos="fade-up">
           We offer luxurious amenities designed to make your stay unforgettable.
         </p>
+
         <div className="row g-4">
           {facilities.map((facility, index) => {
             const Icon = facility.icon;
             return (
-              <div key={index} className="col-12 col-sm-6 col-lg-3">
+              <div key={index} className="col-12 col-sm-6 col-lg-3" data-aos="zoom-in">
                 <div
                   className="card h-100 border-0 shadow-sm p-4 d-flex flex-column align-items-center justify-content-start"
                   style={{ textAlign: "center" }}
