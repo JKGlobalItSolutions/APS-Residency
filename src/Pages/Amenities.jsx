@@ -9,7 +9,11 @@ import { useEffect } from "react";
 const Amenities = () => {
 
   useEffect(() => {
-    AOS.init({ duration: 800, once: true });
+    AOS.init({
+      duration: 1500,      // slow animation
+      once: true,
+      easing: "ease-in-out",
+    });
   }, []);
 
   const facilities = [
@@ -33,7 +37,12 @@ const Amenities = () => {
           {facilities.map((facility, index) => {
             const Icon = facility.icon;
             return (
-              <div key={index} className="col-12 col-sm-6 col-lg-3" data-aos="zoom-in">
+              <div
+                key={index}
+                className="col-12 col-sm-6 col-lg-3"
+                data-aos="fade-up"
+                data-aos-delay={index * 200}  // delay for each card
+              >
                 <div
                   className="card h-100 border-0 shadow-sm p-4 d-flex flex-column align-items-center justify-content-start"
                   style={{ textAlign: "center" }}
