@@ -47,7 +47,7 @@ const Contact = () => {
           >
             <div className="mb-4">
               <h4 style={{ fontWeight: "600", marginBottom: "1rem" }}>Hotel Information</h4>
-              <p className="mb-2"><strong>Address:</strong> 49/A/1 Vettavalam Road, Kilnathur, Tiruvannamalai, 606 601</p>
+              <p className="mb-2"><strong>Address:</strong> 49 A/1 Vettavalam Road, Kilnathur, Tiruvannamalai, 606 601</p>
               <p className="mb-2"><strong>Phone:</strong> 9444195037</p>
               <p className="mb-2"><strong>Email:</strong> apsresidencytvm@gmail.com</p>
               <p className="mb-2"><strong>Check-in / Check-out:</strong> 3:00 PM / 12:00 PM</p>

@@ -183,7 +183,7 @@ const prevImage = () => {
 
   return (
     <div id="room" className="container my-5">
-      <h2 className="text-center mb-3 fw-bold">Our Rooms</h2>
+      <h2 className="text-center mb-3 fw-bold">OUR ROOMS</h2>
       <p className="text-center mb-4 text-muted">
         Choose from carefully designed accommodations, each offering unique comfort and style
       </p>
