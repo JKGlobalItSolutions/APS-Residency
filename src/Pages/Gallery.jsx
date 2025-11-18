@@ -17,7 +17,7 @@ const Gallery = () => {
     <section id="gallery" className="py-5 bg-light">
       <div className="container">
         <div className="text-center mb-4">
-          <h2 className="display-4">Gallery</h2>
+          <h2 className="display-4" style={{color:"#A37D4C"}}>Gallery</h2>
           <p className="text-muted">Take a visual tour of the beautiful hotel</p>
         </div>
         <div className="row g-3">

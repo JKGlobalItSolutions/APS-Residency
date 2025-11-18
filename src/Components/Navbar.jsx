@@ -39,7 +39,7 @@ const Navbar = () => {
     }
   };
 
-  const bgColor = isMobile ? "#fff" : header ? "#fff" : "transparent";
+  const bgColor = isMobile ? "#FBEFD3" : header ? "#FBEFD3" : "transparent";
 
   const navItemStyle = {
     cursor: "pointer",

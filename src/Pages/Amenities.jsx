@@ -24,9 +24,9 @@ const Amenities = () => {
   ];
 
   return (
-    <section id="amenities" className="py-5 text-center" style={{ backgroundColor:"#F8E6B3"}}>
+    <section id="amenities" className="py-5 text-center" style={{ backgroundColor:"#FBEFD3"}}>
       <div className="container">
-        <h2 className="display-5 mb-4" data-aos="fade-down">
+        <h2 className="display-5 mb-4" data-aos="fade-down" style={{color:"#A37D4C"}}>
           Amenities At Hotel
         </h2>
         <p className="text-muted mb-5" data-aos="fade-up">

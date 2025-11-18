@@ -30,11 +30,11 @@ const Contact = () => {
     <section
       id="contact"
       className="py-5"
-      style={{ minHeight: "100vh", backgroundColor: "#F8E6B3" }}
+      style={{ minHeight: "100vh", backgroundColor: "#FBEFD3" }}
     >
       <div className="container">
         <div className="text-center mb-5" data-aos="fade-down">
-          <h2 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>Contact Us</h2>
+          <h2 style={{ fontSize: "2.5rem", marginBottom: "1rem", color:"#A37D4C"}}>Contact Us</h2>
           <p className="text-muted">Get in touch for reservations and inquiries</p>
         </div>
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
-
+// import background_img1 from "../assets/background_img1.jpg";
 // === Import Room Images ===
 import familyRoom1 from "../assets/Family Room/DSC08906.jpg";
 import familyRoom2 from "../assets/Family Room/DSC08911.jpg";
@@ -182,8 +182,20 @@ const prevImage = () => {
   };
 
   return (
-    <div id="room" className="container my-5">
-      <h2 className="text-center mb-3 fw-bold">OUR ROOMS</h2>
+    <div
+  id="room"
+  // style={{
+  //   backgroundImage: `url(${background_img1})`,
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center",
+  //   backgroundRepeat: "no-repeat",
+  //   minHeight: "100vh",
+  //   width: "100%",
+  //   padding: "40px 0",
+  // }}
+  className="container"
+>
+      <h1 className="text-center mt-5 mb-3 fw-bold" style={{color:"#A37D4C"}}>OUR ROOMS</h1>
       <p className="text-center mb-4 text-muted">
         Choose from carefully designed accommodations, each offering unique comfort and style
       </p>
