@@ -40,11 +40,11 @@ import standardRoom3 from "../assets/Standard Room/DSC09152.jpg";
 import standardRoom4 from "../assets/Standard Room/DSC09157.jpg";
 import standardRoom5 from "../assets/Standard Room/DSC09215.jpg";
 
-import suiteBalcony1 from "../assets/Suite Room With Balcony/DSC08735.jpg";
+import suiteBalcony1 from "../assets/Suite Room With Balcony/DSC09111.jpg";
 import suiteBalcony2 from "../assets/Suite Room With Balcony/DSC09079.jpg";
 import suiteBalcony3 from "../assets/Suite Room With Balcony/DSC09094.jpg";
 import suiteBalcony4 from "../assets/Suite Room With Balcony/DSC09097.jpg";
-import suiteBalcony5 from "../assets/Suite Room With Balcony/DSC09111.jpg";
+import suiteBalcony5 from "../assets/Suite Room With Balcony/DSC08735.jpg";
 import suiteBalcony6 from "../assets/Suite Room With Balcony/DSC09118.jpg";
 import suiteBalcony7 from "../assets/Suite Room With Balcony/DSC09215.jpg";
 
