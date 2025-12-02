@@ -6,7 +6,6 @@ import Home from "./Pages/Home"
 import Amenities from "./Pages/Amenities"
 import Gallery from "./Pages/Gallery"
 import Contact from "./Pages/Contact"
-import Rooms from "./Pages/Rooms"
 import ErrorBoundary from "./Components/ErrorBoundary";
 import { Routes, Route } from "react-router-dom"
 import Footer from './Components/Footer';
@@ -29,14 +28,6 @@ function App() {
               <Gallery />
               <Contact />
             </>
-          }
-        />
-        <Route
-          path="/rooms"
-          element={
-            <ErrorBoundary>
-              <Rooms />
-            </ErrorBoundary>
           }
         />
       </Routes>

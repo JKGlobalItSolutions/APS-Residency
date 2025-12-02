@@ -58,7 +58,6 @@ import terraceHillView7 from "../assets/Terrace Hill View Room/DSC08770.jpg";
 import terraceHillView8 from "../assets/Terrace Hill View Room/DSC09215.jpg";
 
 
-import { Link } from "react-router-dom";
 
 
 const Rooms = () => {
@@ -308,18 +307,21 @@ const prevImage = () => {
 
               {/* ---- BOOK NOW BUTTON ---- */}
               <div className="mt-3">
-               <Link to="/rooms">
-  <button
-    className="btn text-white fw-semibold w-100 py-2"
-    style={{
-      borderRadius: "8px",
-      background: "linear-gradient(to right, #d4af37, #c89b1b)",
-      fontSize: "14px",
-    }}
-  >
-    Book Now
-  </button>
-</Link>
+                <a
+                  href="https://jkglobalitsolutions.github.io/Aps-website-dynamic-link/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn text-white fw-semibold w-100 py-2"
+                  style={{
+                    borderRadius: "8px",
+                    background: "linear-gradient(to right, #d4af37, #c89b1b)",
+                    fontSize: "14px",
+                    textDecoration: "none",
+                    display: "inline-block",
+                  }}
+                >
+                  Book Now
+                </a>
               </div>
 
             </div>

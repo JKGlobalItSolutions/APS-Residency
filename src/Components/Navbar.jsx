@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
 
-  // Detect screen width
+  // Detect mobile width
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 992);
     handleResize();
@@ -24,13 +24,13 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll to section or redirect to home
+  // Scroll to section
   const scrollToSection = (id) => {
     if (location.pathname !== "/") {
-      // if user is not on home, go to home with section hash
       window.location.href = `/#${id}`;
       return;
     }
+
     const section = document.getElementById(id);
     if (section) {
       const yOffset = -70;
@@ -39,6 +39,7 @@ const Navbar = () => {
     }
   };
 
+  // Style values
   const bgColor = isMobile ? "#FBEFD3" : header ? "#FBEFD3" : "transparent";
 
   const navItemStyle = {
@@ -56,6 +57,7 @@ const Navbar = () => {
     e.target.style.color = "#A37D4C";
     e.target.style.setProperty("--underline-width", "100%");
   };
+
   const handleMouseLeave = (e, color) => {
     e.target.style.color = color;
     e.target.style.setProperty("--underline-width", "0%");
@@ -73,27 +75,17 @@ const Navbar = () => {
       }}
     >
       <div className="container">
-        {/* ✅ Logo always links to home */}
-        <Link
-          to="/"
-          className="navbar-brand d-flex align-items-center"
-          style={{ cursor: "pointer", textDecoration: "none" }}
-        >
+
+        {/* LOGO */}
+        <Link to="/" className="navbar-brand d-flex align-items-center">
           <img
             src={LogoImage}
-            alt="Hotel Logo"
-            className="me-2"
             width="50"
             height="50"
+            alt="Logo"
             style={{ objectFit: "contain" }}
           />
-          <span
-            style={{
-              color: "#A37D4C",
-              fontWeight: 700,
-              fontSize: "1.2rem",
-            }}
-          >
+          <span style={{ color: "#A37D4C", fontWeight: 700, fontSize: "1.2rem" }}>
             APS RESIDENCY
           </span>
         </Link>
@@ -104,31 +96,30 @@ const Navbar = () => {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Nav Links */}
+        {/* NAV LINKS */}
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav text-uppercase fw-semibold">
+
+            {/* Navigation Items */}
             {[
               { label: "Home", id: "hero" },
-              { label: "Rooms", path: "/rooms" },
+              { label: "Rooms", externalUrl: "https://jkglobalitsolutions.github.io/Aps-website-dynamic-link/" },
               { label: "Amenities", id: "amenities" },
               { label: "Gallery", id: "gallery" },
               { label: "Contact", id: "contact" },
             ].map((item) => (
               <li key={item.label} className="nav-item">
-                {item.path ? (
-                  // 🏨 If it's Rooms link
-                  <Link
-                    to={item.path}
-                    className={`nav-link ${
-                      location.pathname === item.path ? "active" : ""
-                    }`}
+                {item.externalUrl ? (
+                  // 🚪 ROOMS → external link
+                  <a
+                    href={item.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="nav-link"
                     style={{
                       ...navItemStyle,
                       color: header || isMobile ? "#000" : "#fff",
@@ -139,81 +130,46 @@ const Navbar = () => {
                     }
                   >
                     {item.label}
-                    <span
-                      style={{
-                        position: "absolute",
-                        bottom: "0",
-                        left: "0",
-                        height: "2px",
-                        width: "var(--underline-width, 0%)",
-                        backgroundColor: "#A37D4C",
-                        transition: "width 0.3s ease",
-                        display: "block",
-                      }}
-                    ></span>
-                  </Link>
+                  </a>
                 ) : (
-                  // 🏡 All other links
-                  location.pathname === "/rooms" ? (
-                    // 🟡 When on Rooms page: redirect to home
-                    <Link
-                      to="/"
-                      className="nav-link"
-                      style={{
-                        ...navItemStyle,
-                        color: header || isMobile ? "#000" : "#fff",
-                      }}
-                      onMouseEnter={handleMouseEnter}
-                      onMouseLeave={(e) =>
-                        handleMouseLeave(e, header || isMobile ? "#000" : "#fff")
-                      }
-                    >
-                      {item.label}
-                      <span
-                        style={{
-                          position: "absolute",
-                          bottom: "0",
-                          left: "0",
-                          height: "2px",
-                          width: "var(--underline-width, 0%)",
-                          backgroundColor: "#A37D4C",
-                          transition: "width 0.3s ease",
-                          display: "block",
-                        }}
-                      ></span>
-                    </Link>
-                  ) : (
-                    // 🟢 On Home page or other pages: scroll
-                    <span
-                      onClick={() => scrollToSection(item.id)}
-                      className="nav-link"
-                      style={{
-                        ...navItemStyle,
-                        color: header || isMobile ? "#000" : "#fff",
-                      }}
-                      onMouseEnter={handleMouseEnter}
-                      onMouseLeave={(e) =>
-                        handleMouseLeave(e, header || isMobile ? "#000" : "#fff")
-                      }
-                    >
-                      {item.label}
-                      <span
-                        style={{
-                          position: "absolute",
-                          bottom: "0",
-                          left: "0",
-                          height: "2px",
-                          width: "var(--underline-width, 0%)",
-                          backgroundColor: "#A37D4C",
-                          transition: "width 0.3s ease",
-                          display: "block",
-                        }}
-                      ></span>
-                    </span>
-                  )
+                  // 🟢 On home → just scroll
+                  <span
+                    onClick={() => scrollToSection(item.id)}
+                    className="nav-link"
+                    style={{
+                      ...navItemStyle,
+                      color: header || isMobile ? "#000" : "#fff",
+                    }}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={(e) =>
+                      handleMouseLeave(e, header || isMobile ? "#000" : "#fff")
+                    }
+                  >
+                    {item.label}
+                  </span>
                 )}
               </li>
             ))}
+
+            {/* BOOK NOW BUTTON → always open your dynamic link */}
+            <li className="nav-item">
+              <a
+                href="https://jkglobalitsolutions.github.io/Aps-website-dynamic-link/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+                style={{
+                  backgroundColor: "#A37D4C",
+                  color: "#fff",
+                  marginLeft: "10px",
+                  padding: "8px 18px",
+                  borderRadius: "6px",
+                }}
+              >
+                Book Now
+              </a>
+            </li>
+
           </ul>
         </div>
       </div>

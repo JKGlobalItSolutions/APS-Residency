@@ -27,12 +27,9 @@ const HeroSlider = () => {
       btnText: "See our rooms",
     },
   ];
-  const handleScrollToRooms = () => {
-const roomSection = document.getElementById("room");
-if (roomSection) {
-roomSection.scrollIntoView({ behavior: "smooth" });
-}
-};
+  const handleBookNow = () => {
+    window.open("https://jkglobalitsolutions.github.io/Aps-website-dynamic-link/", "_blank", "noopener,noreferrer");
+  };
 
   return (
     <div
@@ -101,7 +98,7 @@ roomSection.scrollIntoView({ behavior: "smooth" });
               border: "2px solid #A37D4C",
               fontWeight: "bold",
             }}
-            onClick={handleScrollToRooms}
+            onClick={handleBookNow}
           >
             {slide.btnText}
           </button>
