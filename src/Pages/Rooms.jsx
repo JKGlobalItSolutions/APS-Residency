@@ -202,12 +202,7 @@ const Rooms = () => {
   };
 
   const handleBookNow = (roomId) => {
-    const room = roomsData.find(r => r._id === roomId);
-    if (room) {
-      setSelectedRoom(room);
-      document.getElementById('booking-section')?.scrollIntoView({ behavior: 'smooth' });
-      alert(`Room selected! ${room.type} has been selected. Please fill in your details below.`);
-    }
+    window.open('https://bookingengine.stayflexi.com/34228/?checkin=06-12-2025&num_nights=1&num_guests=2&source=google&hotel_id=34228', '_blank');
   };
 
   const handleMakePayment = async () => {

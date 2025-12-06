@@ -154,7 +154,7 @@ const Navbar = () => {
             {/* BOOK NOW BUTTON → always open your dynamic link */}
             <li className="nav-item">
               <a
-                href="https://jkglobalitsolutions.github.io/Aps-website-dynamic-link/"
+                href="https://bookingengine.stayflexi.com/34228/?checkin=06-12-2025&num_nights=1&num_guests=2&source=google&hotel_id=34228"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn"
