@@ -5,9 +5,9 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 // import background_img1 from "../assets/background_img1.jpg";
 // === Import Room Images ===
 import familyRoom1 from "../assets/Family Room/DSC08906.jpg";
-import familyRoom2 from "../assets/Family Room/DSC08911.jpg";
+// import familyRoom2 from "../assets/Family Room/DSC08911.jpg";
 import familyRoom3 from "../assets/Family Room/DSC08920.jpg";
-import familyRoom4 from "../assets/Family Room/DSC08929.jpg";
+// import familyRoom4 from "../assets/Family Room/DSC08929.jpg";
 import familyRoom5 from "../assets/Family Room/DSC08936.jpg";
 import familyRoom6 from "../assets/Family Room/DSC09215.jpg";
 
@@ -20,16 +20,16 @@ import hillViewSuite6 from "../assets/Hill View Suite Room With Balcony/DSC08890
 import hillViewSuite7 from "../assets/Hill View Suite Room With Balcony/DSC09215.jpg";
 
 import premiumHillView1 from "../assets/Premium Hill View Rooms/DSC09005.jpg";
-import premiumHillView2 from "../assets/Premium Hill View Rooms/DSC09013.jpg";
+// import premiumHillView2 from "../assets/Premium Hill View Rooms/DSC09013.jpg";
 import premiumHillView3 from "../assets/Premium Hill View Rooms/DSC09215.jpg";
 import premiumHillView4 from "../assets/Premium Hill View Rooms/IMG_5079.jpg";
 import premiumHillView5 from "../assets/Premium Hill View Rooms/IMG_5085.jpg";
-import premiumHillView6 from "../assets/Premium Hill View Rooms/IMG_5096.jpg";
+// import premiumHillView6 from "../assets/Premium Hill View Rooms/IMG_5096.jpg";
 import premiumHillView7 from "../assets/Premium Hill View Rooms/IMG_5105.jpg";
 
 import premiumRoom1 from "../assets/Premium Room/DSC08906.jpg";
-import premiumRoom2 from "../assets/Premium Room/DSC08911.jpg";
-import premiumRoom3 from "../assets/Premium Room/DSC09021.jpg";
+// import premiumRoom2 from "../assets/Premium Room/DSC08911.jpg";
+// import premiumRoom3 from "../assets/Premium Room/DSC09021.jpg";
 import premiumRoom4 from "../assets/Premium Room/DSC09024.jpg";
 import premiumRoom5 from "../assets/Premium Room/DSC09215.jpg";
 import premiumRoom6 from "../assets/Premium Room/IMG_5132.jpg";
@@ -41,7 +41,7 @@ import standardRoom4 from "../assets/Standard Room/DSC09157.jpg";
 import standardRoom5 from "../assets/Standard Room/DSC09215.jpg";
 
 import suiteBalcony1 from "../assets/Suite Room With Balcony/DSC09111.jpg";
-import suiteBalcony2 from "../assets/Suite Room With Balcony/DSC09079.jpg";
+// import suiteBalcony2 from "../assets/Suite Room With Balcony/DSC09079.jpg";
 import suiteBalcony3 from "../assets/Suite Room With Balcony/DSC09094.jpg";
 import suiteBalcony4 from "../assets/Suite Room With Balcony/DSC09097.jpg";
 import suiteBalcony5 from "../assets/Suite Room With Balcony/DSC08735.jpg";
@@ -52,7 +52,7 @@ import terraceHillView1 from "../assets/Terrace Hill View Room/DSC08716.jpg";
 import terraceHillView2 from "../assets/Terrace Hill View Room/DSC08720.jpg";
 import terraceHillView3 from "../assets/Terrace Hill View Room/DSC08727.jpg";
 import terraceHillView4 from "../assets/Terrace Hill View Room/DSC08737.jpg";
-import terraceHillView5 from "../assets/Terrace Hill View Room/DSC08748.jpg";
+// import terraceHillView5 from "../assets/Terrace Hill View Room/DSC08748.jpg";
 import terraceHillView6 from "../assets/Terrace Hill View Room/DSC08756.jpg";
 import terraceHillView7 from "../assets/Terrace Hill View Room/DSC08770.jpg";
 import terraceHillView8 from "../assets/Terrace Hill View Room/DSC09215.jpg";
@@ -68,6 +68,7 @@ const Rooms = () => {
     {
       name: "Standard Room",
       guests: "Up to 2 guests",
+      beds:"Queen bed",
       images: [standardRoom1, standardRoom2, standardRoom3, standardRoom4, standardRoom5],
       description:
         "Comfortable and well-appointed room featuring modern amenities and city views. Perfect for business travelers and couples seeking quality accommodation at great value.",
@@ -75,8 +76,9 @@ const Rooms = () => {
     },
     {
       name: "Premium Room",
-      guests: "Up to 2 guests",
-      images: [premiumRoom1, premiumRoom2, premiumRoom3, premiumRoom4, premiumRoom5, premiumRoom6],
+      beds:"King bed",
+      guests: "Up to 2 Adults and 2 child",
+      images: [premiumRoom1, premiumRoom4, premiumRoom5, premiumRoom6],
       description:
         "Elegant premium room with enhanced furnishings and modern amenities. Features plush bedding and a relaxing atmosphere.",
       amenities: ["Free WiFi", "Smart TV", "Air Conditioning", "Safe"],
@@ -84,30 +86,34 @@ const Rooms = () => {
     {
       name: "Family Room",
       guests: "Up to 4 guests",
-      images: [familyRoom1, familyRoom2, familyRoom3, familyRoom4, familyRoom5, familyRoom6],
+beds:"2*Queen bed",
+      images: [familyRoom1, familyRoom3, familyRoom5, familyRoom6],
       description:
         "Spacious family room designed for comfort and convenience. Ideal for families or small groups.",
       amenities: ["Free WiFi", "Smart TV", "Air Conditioning", "Safe"],
     },
     {
       name: "Suite Room with Balcony",
-      guests: "Up to 3 guests",
-      images: [suiteBalcony1, suiteBalcony2, suiteBalcony3, suiteBalcony4, suiteBalcony5, suiteBalcony6, suiteBalcony7],
+      guests: "Up to 3 adults and 1 child",
+      beds:"King bed",
+      images: [suiteBalcony1, suiteBalcony3, suiteBalcony4, suiteBalcony5, suiteBalcony6, suiteBalcony7],
       description:
         "Luxurious suite featuring a private balcony with stunning views. Perfect for guests who want a premium stay experience.",
       amenities: ["Free WiFi", "Smart TV", "Air Conditioning", "Safe"],
     },
     {
       name: "Premium Hill View Room",
-      guests: "Up to 2 guests",
-      images: [premiumHillView1, premiumHillView2, premiumHillView3, premiumHillView4, premiumHillView5, premiumHillView6, premiumHillView7],
+      guests: "Up to 2 guests and 1 child",
+      beds:"King bed",
+      images: [premiumHillView1, premiumHillView3, premiumHillView4, premiumHillView5, premiumHillView7],
       description:
         "Premium room with breathtaking hill views and modern luxury. Wake up to scenic landscapes every morning.",
       amenities: ["Free WiFi", "Smart TV", "Air Conditioning", "Safe"],
     },
     {
       name: "Hill View Suite Room with Balcony",
-      guests: "Up to 4 guests",
+      guests: "Up to 4 Adults and 1 child",
+      beds:"King bed",
       images: [hillViewSuite1, hillViewSuite2, hillViewSuite3, hillViewSuite4, hillViewSuite5, hillViewSuite6, hillViewSuite7],
       description:
         "Exclusive hill view suite with private balcony offering panoramic vistas. Experience luxury and tranquility.",
@@ -115,8 +121,9 @@ const Rooms = () => {
     },
     {
       name: "Terrace Hill View Room",
-      guests: "Up to 3 guests",
-      images: [terraceHillView1, terraceHillView2, terraceHillView3, terraceHillView4, terraceHillView5, terraceHillView6, terraceHillView7, terraceHillView8],
+      beds:"King bed",
+      guests: "Up to 3 Adults and 1 child",
+      images: [terraceHillView1, terraceHillView2, terraceHillView3, terraceHillView4, terraceHillView6, terraceHillView7, terraceHillView8],
       description:
         "Unique terrace room with private outdoor space and magnificent hill views. Perfect for couples and small families.",
       amenities: ["Free WiFi", "Smart TV", "Air Conditioning", "Safe"],
@@ -288,7 +295,8 @@ const prevImage = () => {
             {/* RIGHT SIDE CONTENT */}
             <div className="col-md-6 mt-3 mt-md-0">
               <div className="d-flex align-items-center gap-3 mb-2 text-muted">
-                <span><i className="bi bi-bed me-1"></i> Queen Bed</span>
+                {/* <span><i className="bi bi-bed me-1"></i> </span>  */}
+                <span><i className="bi bi-bed me-1"></i> {selectedRoom.beds}</span>
                 <span><i className="bi bi-people me-1"></i> {selectedRoom.guests}</span>
               </div>
 

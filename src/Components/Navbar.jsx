@@ -107,7 +107,7 @@ const Navbar = () => {
             {/* Navigation Items */}
             {[
               { label: "Home", id: "hero" },
-              { label: "Rooms", externalUrl: "https://jkglobalitsolutions.github.io/Aps-website-dynamic-link/" },
+              { label: "Rooms", externalUrl: "https://bookingengine.stayflexi.com/34228/?checkin=06-12-2025&num_nights=1&num_guests=2&source=google&hotel_id=34228" },
               { label: "Amenities", id: "amenities" },
               { label: "Gallery", id: "gallery" },
               { label: "Contact", id: "contact" },

@@ -28,7 +28,7 @@ const HeroSlider = () => {
     },
   ];
   const handleBookNow = () => {
-    window.open("https://jkglobalitsolutions.github.io/Aps-website-dynamic-link/", "_blank", "noopener,noreferrer");
+    window.open("https://bookingengine.stayflexi.com/34228/?checkin=06-12-2025&num_nights=1&num_guests=2&source=google&hotel_id=34228", "_blank", "noopener,noreferrer");
   };
 
   return (
